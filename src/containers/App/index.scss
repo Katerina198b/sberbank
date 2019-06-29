@@ -1,0 +1,99 @@
+@import "../../colors";
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: 400;
+  src: url("../../../fonts/opensans-regular.woff2") format("woff2"),
+  url("../../../fonts/opensans-regular.woff") format("woff"),
+  url("../../../fonts/opensans-regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-weight: 600;
+  src: url("../../../fonts/opensans-semibold.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
+  text-decoration: none ;
+}
+
+*:focus {
+  outline: none;
+  text-decoration: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1.4;
+  font: 400 18px OpenSans, sans-serif;
+  color: $text-color;
+}
+
+.dotted {
+  background-image: -webkit-radial-gradient(center, circle, $light-grey, $light-grey 2px, transparent 2px, transparent 100%);
+  background-image: -o-radial-gradient(center, circle, $light-grey, $light-grey 2px, transparent 2px, transparent 100%);
+  background-image: radial-gradient(circle at center, $light-grey, $light-grey 2px, transparent 2px, transparent 100%);
+  background-size: 20px 20px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  height: 100%;
+}
+
+.container_x-center {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.container_y-center {
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.button {
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin: 13px 0;
+  border: none;
+}
+
+.input {
+  padding: 20px 20px 5px 0;
+  font-size: 1rem;
+}
+
+input:focus, button:focus, label:focus {
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  font-family: OpenSans, Helvetica Neue, Helvetica, Arial, sans-serif;
+}

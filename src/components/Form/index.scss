@@ -1,0 +1,113 @@
+@import "../../colors.scss";
+
+
+.form {
+  font-weight: 400;
+  font-size: 1rem;
+  max-width: 543px;
+  margin: 40px auto 40px;
+  background: #fff;
+  padding: 40px;
+  color: $dark-grey;
+
+
+  &.form_border {
+    border: 1px solid $grey;
+  }
+
+  .form__header {
+    font-size: 1.8rem;
+  }
+
+  .form__button {
+    background: $green;
+    -webkit-transition: .5s;
+    -o-transition: .5s;
+    transition: .5s;
+    color: white;
+    display: block;
+    width: 100%;
+    &:disabled {
+      background: $dark-grey;
+    }
+  }
+
+
+  .form__item {
+    margin: 63px 0;
+    position: relative;
+  }
+
+  .form__conditions {
+    color: $grey;
+    font-size: .8rem;
+  }
+
+  .form__link {
+    color: $green;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+
+  .form__input {
+    border: 1px solid $grey;
+    border-color: transparent transparent $grey transparent;
+    display: block;
+    width: 100%;
+    -webkit-transition: .8s;
+    -o-transition: .8s;
+    transition: .8s;
+    font-size: 1rem;
+    padding: 5px 0;
+
+
+    &.form__input_incorrect:focus ~ .form__label {
+      color: $red;
+    }
+
+    &:focus ~ , &:not(.form__input_empty) ~ {
+      .form__label {
+        top: -20px;
+        color: $dark-grey;
+        font-size: .75rem;
+        &:after {
+          width: 100%;
+          left: 0;
+        }
+      }
+    }
+  }
+
+  .form__label {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    color: $grey;
+    cursor: text;
+    -webkit-transition: 0.2s ease all;
+    -o-transition: 0.2s ease all;
+    transition: 0.2s ease all;
+    margin: 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 45%;
+      height: 1px;
+      width: 0;
+      background-color: $dark-grey;
+      -webkit-transition: .2s ease all;
+      -o-transition: .2s ease all;
+      transition: .2s ease all;
+    }
+  }
+}
