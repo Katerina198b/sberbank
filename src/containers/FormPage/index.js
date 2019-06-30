@@ -17,7 +17,7 @@ import ModalHeader from '../../components/Modal/ModalHeader'
 
 import SuccessIcon from '../../components/Svg/SuccessIcon'
 
-class FormPage extends React.Component {
+export class FormPage extends React.Component {
   constructor () {
     super()
     this.state = {
@@ -29,8 +29,10 @@ class FormPage extends React.Component {
   }
 
     isCorrect = () => {
-      // проверяем метод isCorrect только у required компонент
-      return FormName.isCorrect(this.state.name) && FormPhone.isCorrect(this.state.phone)
+      // проверяем метод isCorrect только у required и не пустных полей
+      return FormName.isCorrect(this.state.name) &&
+             FormPhone.isCorrect(this.state.phone) &&
+             (this.state.email.length === 0 || FormEmail.isCorrect(this.state.email))
     };
 
     onFormSubmit = (e) => {
@@ -89,7 +91,7 @@ class FormPage extends React.Component {
 
               <FormConditions>
                     Нажимая кнопку &laquo;Отправить&raquo;, я даю свое согласие на обработку персональных данных.
-                <a className='form__link' target='_blank' href='../../static/conditions.pdf'> Условия использования данных.</a>
+                <a className='form__link' download href='./static/conditions.pdf'> Условия использования данных.</a>
               </FormConditions>
 
             </Form>

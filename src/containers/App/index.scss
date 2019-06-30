@@ -3,15 +3,17 @@
 @font-face {
   font-family: OpenSans;
   font-weight: 400;
-  src: url("../../../fonts/opensans-regular.woff2") format("woff2"),
-  url("../../../fonts/opensans-regular.woff") format("woff"),
-  url("../../../fonts/opensans-regular.ttf") format("truetype");
+  src: url("../../../dist/fonts/opensans-regular.woff2") format("woff2"),
+  url("../../../dist/fonts/opensans-regular.woff") format("woff"),
+  url("../../../dist/fonts/opensans-regular.ttf") format("truetype");
 }
 
 @font-face {
   font-family: OpenSans;
   font-weight: 600;
-  src: url("../../../fonts/opensans-semibold.woff2") format("woff2");
+  src: url("../../../dist/fonts/opensans-semibold.woff2") format("woff2"),
+  url("../../../dist/fonts/opensans-semibold.woff") format("woff"),
+  url("../../../dist/fonts/opensans-semibold.ttf") format("truetype");
 }
 
 * {
@@ -36,6 +38,10 @@ body {
   line-height: 1.4;
   font: 400 18px OpenSans, sans-serif;
   color: $text-color;
+}
+
+html {
+  min-width: 300px;
 }
 
 .dotted {

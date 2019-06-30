@@ -9,7 +9,7 @@ describe('FormInput inheritors', () => {
   function crashTest (ComponentName) {
     it(`${ComponentName} should render without crashing`, () => {
       const div = document.createElement('div')
-      ReactDom.render(<ComponentName value={''}/>, div)
+      ReactDom.render(<ComponentName value={''} onChange={() => {}}/>, div)
       ReactDom.unmountComponentAtNode(div)
     })
   }
